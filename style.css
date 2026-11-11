@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    --color-text: #fff;
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background: var(--bg);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.icons img {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.btn {
+    background: var(--main-color);
+    color: var(--color-text);
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 0.6rem;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+
+.home-container {
+    background: url("./assets/imgs/home-img.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 120vh;
+    padding: 100px;
+    /* Adicione esta linha (ajuste os pixels conforme a altura do seu menu) */
+}
+
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    font-size: 6rem;
+    color: var(--color-text);
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.title span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: var(--color-text);
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    background: var(--black);
+    border: var(--border);
+    border-radius: 3rem;
+    padding: 5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu .box-container .box img {
+    height: 20rem;
+    margin-bottom: 1rem;
+}
+
+.menu .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--color-text);
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+    line-height: 1.8;
+}
+
+.menu .box-container .box .price span {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 100;
+}
+
+
+.menu .box-container .box:hover {
+    background-color: #fff;
+}
+
+.menu .box-container .box:hover>* {
+    color: var(--black);
+}
+
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.review .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem; 
+}
+
+.review .box-container .box {
+    border: 1px solid rgba(161, 161, 161, 0.1);
+    /* Ou o estilo de borda desejado */
+    /* Se houver divs .box dentro de .box, limpe a borda delas para evitar duplicação: */
+}
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    /* Mantenha o tamanho que você já definiu */
+    line-height: 1.6;
+    /* Define um espaçamento adequado entre as linhas */
+    padding: 2rem 0;
+    /* Ajuste o espaçamento interno superior/inferior se necessário */
+    color:#fff;
+}
+
+.review .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--color-text);
+    margin: 1rem;
+}
+
+.review .box-container .box .box {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.review .box-container .box .user-img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 2rem;
+    border-top: var(--border);
+}
+
+footer .share {
+    padding: 1rem 0;
+}
+
+footer .share img {
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+footer p, .footer p {
+
+    color: #ffffff; /* Ou use a sua variável de cor de texto, ex: var(--color-text) */
+
+    font-size: 1.4rem;
+
+    padding: 1rem 0;
+
+}
+ 
